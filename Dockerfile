@@ -13,6 +13,6 @@ COPY . /usr/src/app
 
 ENV NODE_ENV=production
 
-RUN npm run build
+# RUN npm run build
 
 CMD [ "npm", "start" ]
