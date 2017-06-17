@@ -11,7 +11,7 @@ router.post('/seckill', function (req, res) {
     console.log('count=' + count++);
     var fn = function (optionalClient) {
         if (optionalClient == 'undefined' || optionalClient == null) {
-            var client = redis.createClient();
+            var client = redis.createClient({ host: 'redis' });
         }else{
             var client = optionalClient;
         }
